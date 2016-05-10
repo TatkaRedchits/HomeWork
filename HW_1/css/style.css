@@ -3,9 +3,10 @@
 	margin: 0;
 }
 body {
-	background-color: rgb(239, 239, 239);
+	background-color: #efefef;
 	padding: 5px 0 40px;
-	font: 16px/24px 'Times New Roman', serif;
+	font: 16px 'Times New Roman', serif;
+	line-height: 25px;
 }
 .wrapper {
 	height: 750px;
@@ -14,7 +15,7 @@ body {
 	background-color: white;
 	padding: 25px 50px 50px;
 	box-sizing: border-box;
-	box-shadow: 0 0 5px 0 rgb(167, 167, 167);
+	box-shadow: 0 0 5px 0 #a7a7a7;
 }
 h1 {
 	font-size: 22px;
@@ -27,17 +28,17 @@ img {
 	display: block;
 	margin: 0 auto 10px;
 }
-.wrapper>div {
+.section {
 	padding: 25px 0 15px 10px;
-	border-bottom: 2px solid rgb(123, 123, 123);
+	border-bottom: 2px solid #7b7b7b;
 }
-.wrapper>div:last-child {
+.section:last-child {
 	border-bottom: none;
 }
 ul {
 	padding-left: 30px;
 	padding-top: 25px;
 }
-.contacts p:first-child {
+.phone {
 	padding-bottom: 25px;
 }
