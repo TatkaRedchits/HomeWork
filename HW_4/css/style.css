@@ -5,9 +5,9 @@ body {
   font: 14px Tahoma, sans-serif;
 }
 .clearfix:after{
-    content:'';
-    display:table;
-    clear:both;
+  content:'';
+  display:table;
+  clear:both;
 }
 
 /* Header */
