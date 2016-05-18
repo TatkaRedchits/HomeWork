@@ -1,0 +1,256 @@
+div, header, footer, nav, ul, li, p, a {
+  box-sizing: border-box;
+}
+body {
+  font: 14px Tahoma, sans-serif;
+}
+.clearfix:after{
+    content:'';
+    display:table;
+    clear:both;
+}
+
+/* Header */
+.header-wrapper {
+  background-color: #11cde2;
+  background: -webkit-linear-gradient(#128aa7 17%, #5ef0ff 17%, #5ef0ff 18%, #11cde2 18%, #fff);
+  background: -o-linear-gradient(#128aa7 17%, #5ef0ff 17%, #5ef0ff 18%, #11cde2 18%, #fff);
+  background: linear-gradient(#128aa7 17%, #5ef0ff 17%, #5ef0ff 18%, #11cde2 18%, #fff);
+}
+header {
+  height: 175px;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 10px 25px 0 25px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px #000;
+}
+
+/* Logotype */
+.logo,
+.info {
+  height: 100%;
+  width: 50%;
+  color: #128aa7;
+  font-size: 12px;
+}
+.logo {
+  background: url('../img/Logo.png') no-repeat left bottom;
+  float: left;
+}
+.logo div {
+  margin: 100px 0 0 70px;
+}
+.info {
+  float: right;
+  text-align: right;
+}
+
+/* All contacts */
+.contacts {
+  display: inline-block;
+  text-align: left; 
+  padding-right: 5px;
+}
+.contacts h4 {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.contacts span {
+  display: block;
+  line-height: 1.4em;
+}
+
+/* Menu for countries */
+.countries {
+  margin-top: 35px;
+  height: 65px;
+}
+.countries li {
+  display: inline-block;
+}
+.countries li a {
+  display: block;
+  width: 55px;
+  height: 65px;
+  color: #128aa7;
+  font-size: 10px;
+  padding-top: 45px;
+  text-align: center;
+}
+.countries .india {
+  background: url('../img/india.png') no-repeat top center;
+}
+.countries .nepal {
+  background: url('../img/nepal.png') no-repeat top center;
+}
+.countries .tibet {
+  background: url('../img/tibet.png') no-repeat top center;
+}
+.countries .bhutan {
+  background: url('../img/bhutan.png') no-repeat top center;
+}
+.countries .sri-lanka {
+  background: url('../img/sri-lanka.png') no-repeat top center;
+}
+.countries .maldives {
+  background: url('../img/maldives.png') no-repeat top center;
+}
+
+
+/* Conteiner */
+.container-wrapper {
+  background-color: #11cde2;
+  background: -webkit-linear-gradient(#11cde2 10%, #0c739f);
+  background: -o-linear-gradient(#11cde2 10%, #0c739f);
+  background: linear-gradient(#11cde2 10%, #0c739f);
+}
+.container {
+  min-height: 400px;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 1px 4px #000;
+}
+.main-photo {
+  height: 237px;
+  background: url('../img/Photo.jpg') no-repeat center;
+  border-top: 1px solid #138aa7;
+  border-bottom: 1px solid #138aa7;
+}
+
+/* Central menu */
+.main-menu {
+  position: relative;
+  z-index: 1;
+  height: 30px;
+  background-color: #333;
+  padding: 0 25px;
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 4px #000;
+}
+.main-menu>li {
+  float: left;
+  position: relative;
+}
+.main-menu>li>a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 0 35px;
+}
+.main-menu>li>a:hover {
+  text-decoration: underline;
+}
+.main-menu .arrow:after {
+  position: absolute;
+  content: '\25be';
+  color: #fff;
+  right: 20px;
+  bottom: 5px;
+
+}
+.submenu {
+  display: none;
+  position: absolute;
+  left: 25px;
+  width: 140px;
+  padding: 0 10px 5px;
+  background-color: #333;
+  box-shadow: 0 6px 10px -1px #000;
+}
+.submenu>li {
+  display: block;
+}
+.submenu>li>a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+}
+.submenu>li>a:hover {
+  text-decoration: underline;
+}
+.main-menu>li:hover>.submenu {
+  display: block;
+}
+
+/* Content with 3 columns */
+.content {
+  overflow: hidden;
+}
+.fon-left {
+  width: 100%;
+  background-color: #edeef0;
+  float: left;
+  position: relative;
+  right: 58%;
+  border-right: 1px solid #c7cacf;
+}
+.fon-center {
+  width: 100%;
+  background-color: #fff;
+  float: left;
+  position: relative;
+  right: 21%;
+  border-right: 1px solid #c7cacf;
+}
+.fon-right {
+  width: 100%;
+  background-color: #edeef0;
+  float: left;
+}
+.left {
+  width: 21%;
+  padding: 10px 15px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  left: 79%;
+}
+.center {
+  width: 58%;
+  padding: 10px 15px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  left: 79%;
+}
+.right {
+  width: 21%;
+  padding: 10px 15px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  left: 79%;
+}
+
+.content h3 {
+  text-align: center;
+  font-size: 18px;
+  color: #424c43;
+  line-height: 26px;
+}
+.content p {
+  color: #424c43;
+  line-height: 24px;
+}
+
+/* Copyright */
+.copyright {
+  height: 30px;
+  width: 1000px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+}
+.copyright a {
+  text-decoration: none;
+  color: #fff;
+}
+
