@@ -9,11 +9,10 @@ body {
   line-height: 25px;
 }
 .wrapper {
-  height: 750px;
   width: 510px;
   margin: 0 auto;
   background-color: white;
-  padding: 25px 50px 50px;
+  padding: 25px 50px 35px;
   box-sizing: border-box;
   box-shadow: 0 0 5px 0 #a7a7a7;
 }
@@ -32,12 +31,14 @@ img {
   padding: 25px 0 15px 10px;
   border-bottom: 2px solid #7b7b7b;
 }
+.section .aim {
+  margin-bottom: 25px;
+}
 .section:last-child {
   border-bottom: none;
 }
 ul {
   padding-left: 30px;
-  padding-top: 25px;
 }
 .phone {
   padding-bottom: 25px;
