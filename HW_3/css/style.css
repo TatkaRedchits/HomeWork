@@ -1,20 +1,35 @@
-div, header, footer, nav, menu, li, p {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font: 13px 'Open Sans', Tahoma, sans-serif;
+}
+html,
+body {
+  height: 100%;
 }
 body {
   background-color: #f9f9f9;
-  font: 13px 'Open Sans', sans-serif;
 }
 .wrapper {
+  height: 100%;
+  min-width: 1060px;
+  display: table;
+  table-layout: fixed;
+  overflow: hidden;
   margin: 0 auto;
   padding: 50px 50px 30px;
   background-color: #fff;
-  width: 1060px;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+.w1 {
+  display: table-row;
+  height: 100%;
 }
 
 /* Header */
 .logo {
+  display: block;
   margin-bottom: 35px; 
 }
 .logo img {
@@ -23,7 +38,6 @@ body {
 }
 .top-menu {
   margin-bottom: 40px;
-  height: 40px;
   background-color: #525151;
   list-style: none;
 }
@@ -55,11 +69,10 @@ body {
   float: left;
 }
 .content:after{
-    content:'';
-    display:table;
-    clear:both;
+  content:'';
+  display:table;
+  clear:both;
 }
-
 .content article {
   margin-left: 50px;
   width: 670px;
@@ -85,29 +98,29 @@ body {
   color: #000;
   background-color: #f9f9f9;
 }
-
 .article-image {
-  width: 672px;
-  height: 400px;
+  padding: 35px 85px;
   border: 1px solid #c8c8c8;
-  background: url('../img/Bicycle.jpg') no-repeat center;
   margin-bottom: 35px;
+}
+.article-image img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
 }
 article p {
   color: #2c2c2c;
   padding: 0 25px;
-  line-height: 1.5em;
+  line-height: 22px;
 }
 
 /* Footer */
 footer {
-  height: 40px;
   margin-top: 55px;
   padding-right: 25px;
   background-color: #e1e1e1;
   font-size: 0;
 }
-
 .bottom-menu {
   list-style: none;
   width: 70%;
@@ -127,7 +140,6 @@ footer {
 .bottom-menu li a:hover {
   text-decoration: underline;
 }
-
 .copyright {
   width: 30%;
   display: inline-block;
