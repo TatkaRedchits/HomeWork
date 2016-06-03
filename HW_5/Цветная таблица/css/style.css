@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border: hidden;
+  margin: 0 auto;
+}
+td {
+  border: 10px solid #000;
+}
+/* HEIGHT */
+.first-height {
+  height: 45px;
+}
+.second-height {
+  height: 130px;
+}
+.third-heidht {
+  height: 60px;
+}
+.fourth-heidht {
+  height: 30px;
+}
+/* WIDTH */
+.first-width {
+  width: 50px;
+}
+.second-width {
+  width: 60px;
+}
+.third-width {
+  width: 130px;
+}
+.fourth-width {
+  width: 75px;
+}
+/* BACKGROUND */
+.yellow {
+  background: url('../img/yellow.png') repeat;
+}
+.red {
+  background: url('../img/red.png') repeat;
+}
+.black {
+  background: url('../img/black.png') repeat;
+}
+.blue {
+  background: url('../img/blue.png') repeat;
+}
