@@ -58,9 +58,12 @@ header {
   font-weight: bold;
   padding-bottom: 5px;
 }
-.contacts span {
+.contacts a {
   display: block;
+  text-decoration: none;
   line-height: 1.4em;
+  color: #128aa7;
+  font-size: 12px;
 }
 
 /* Menu for countries */
