@@ -1,23 +1,23 @@
 var a = prompt('Please enter your number');
 var n = prompt('Enter power');
 
-function power (a, n) {
-    if (a == '' || n == '' || isNaN(a) || isNaN(n)) {
+function power(a, n) {
+    if (a === '' || n === '' || +a != a || +n != n) {
         return console.log('NaN');
     }
-    if (n % 1 != 0) {
-        return console.log(powerFrac (a, n));
+    if (n >> 0 != n) {
+        return console.log(powerFrac(a, n));
     } 
-    if (n == 0) {
-        console.log(1);
+    if (a == 0 && n == 0) {
+        console.log('Underfind');
     } else if (n > 0) {
-        console.log(powerNat (a, n));
+        console.log(powerNat(a, n));
     } else {
-        console.log(powerNeg (a, n));
+        console.log(powerNeg(a, n));
     }
 }
 
-function powerNat (a, n) {
+function powerNat(a, n) {
     var result = 1;
     for (var i = 0; i < n; i++) {
         result *= a;
@@ -25,30 +25,12 @@ function powerNat (a, n) {
     return result; 
 }
 
-function powerNeg (a, n) {
+function powerNeg(a, n) {
     return 1 / powerNat(a, -n);
 }
 
-function powerFrac (a, n) {
+function powerFrac(a, n) {
     return Math.exp(n * Math.log(a));
 }
 
 power (a, n);
-
-/*** Если можно использовать Math.log и Math.exp, то всю функцию power можно переписать и так ***/
-/*
-var a = prompt ('Please enter your number');
-var n = prompt ('Enter power');
-
-function power (a, n) {
-    if (a == '' || n == '' || isNaN(a) || isNaN(n)) {
-        return console.log('NaN');
-    }
-    if (n == 0) {
-        console.log(1);
-    } else {
-        console.log(Math.exp(n * Math.log(a)));
-    }
-}
-power (a, n);
-*/
