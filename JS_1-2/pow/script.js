@@ -34,21 +34,3 @@ function powerFrac (a, n) {
 }
 
 power (a, n);
-
-/*** Если можно использовать Math.log и Math.exp, то всю функцию power можно переписать и так ***/
-/*
-var a = prompt ('Please enter your number');
-var n = prompt ('Enter power');
-
-function power (a, n) {
-    if (a == '' || n == '' || isNaN(a) || isNaN(n)) {
-        return console.log('NaN');
-    }
-    if (n == 0) {
-        console.log(1);
-    } else {
-        console.log(Math.exp(n * Math.log(a)));
-    }
-}
-power (a, n);
-*/
