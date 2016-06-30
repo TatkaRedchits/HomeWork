@@ -81,23 +81,24 @@ body {
     width: 115px;
     padding: 0 3px;
     height: 17px;
-    line-height: normal;
+    line-height: 17px;
+    font-size: 10px;
 }
 .header-top form input::-webkit-input-placeholder {
     font: 11px Lucida, sans-serif;
-    line-height: normal;
+    line-height: 17px;
 }
 .header-top form input::-moz-placeholder { /* Firefox 19+ */
     font: 11px Lucida, sans-serif;
-    line-height: normal;
+    line-height: 17px;
 }
 .header-top form input:-moz-placeholder {  /* Firefox 18- */
     font: 11px Lucida, sans-serif;
-    line-height: normal;
+    line-height: 17px;
 }
 .header-top form input:-ms-input-placeholder {
     font: 11px Lucida, sans-serif;
-    line-height: normal;
+    line-height: 17px;
 }
 
 .header-top form button {
