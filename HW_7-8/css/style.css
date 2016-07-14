@@ -166,24 +166,22 @@ header {
 .slider__content {
     position: relative; 
 }
-.slider__content:before {
-    position: absolute;
-    content: '';
-    top: calc((100% - 42px)/2);
-    left: 0;
-    width: 34px;
-    height: 42px;
-    background: url('../img/arrows.png') no-repeat;
-    background-position: 0 0;
-}
+.slider__content:before,
 .slider__content:after {
     position: absolute;
     content: '';
     top: calc((100% - 42px)/2);
-    right: 0;
     width: 34px;
     height: 42px;
+    cursor: pointer;
     background: url('../img/arrows.png') no-repeat;
+}
+.slider__content:before {    
+    left: 0;    
+    background-position: 0 0;
+}
+.slider__content:after {    
+    right: 0;
     background-position: -34px 0;
 }
 .slider__title {
