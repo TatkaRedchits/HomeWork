@@ -2,18 +2,18 @@
 
 function calculateKineticEnergy(m, v) {
     if (m < 0 || v < 0 || m == undefined || v == undefined || +m != m || +v != v) {
-        return ('invalid data');
+        return NaN;
     }
-    return Math.round(m * Math.pow(v, 2) / 2 * 100 ) / 100;
+    return m * Math.pow(v, 2) / 2;
 }
 
-console.log('Kinetic Energy: ' + calculateKineticEnergy(1, 1.39));
-console.log('Kinetic Energy: ' + calculateKineticEnergy(20, 1.96));
-console.log('Kinetic Energy: ' + calculateKineticEnergy(0.75));
-console.log('Kinetic Energy: ' + calculateKineticEnergy(-6, 1.1));
-console.log('Kinetic Energy: ' + calculateKineticEnergy(54, 3.9));
-console.log('Kinetic Energy: ' + calculateKineticEnergy(54, '3.9'));
-console.log('Kinetic Energy: ' + calculateKineticEnergy(54, 'sg'));
+console.log('Kinetic Energy: ' + calculateKineticEnergy(1, 1.39).toFixed(2));
+console.log('Kinetic Energy: ' + calculateKineticEnergy(20, 1.96).toFixed(2));
+console.log('Kinetic Energy: ' + calculateKineticEnergy(0.75).toFixed(2));
+console.log('Kinetic Energy: ' + calculateKineticEnergy(-6, 1.1).toFixed(2));
+console.log('Kinetic Energy: ' + calculateKineticEnergy(54, 3.9).toFixed(2));
+console.log('Kinetic Energy: ' + calculateKineticEnergy(54, '3.9').toFixed(2));
+console.log('Kinetic Energy: ' + calculateKineticEnergy(54, 'sg').toFixed(2));
 console.log('');
 
 /*******   Calculate Space Of Rectangle   *******/ 
