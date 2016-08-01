@@ -51,7 +51,7 @@ function indexOf(arr, value, fromIndex) {
         fromIndex = 0;
     }
     if (fromIndex >= arr.length) {
-        return ('-1');
+        return -1;
     }
     if (fromIndex < 0) {
         fromIndex = arr.length + fromIndex;
@@ -62,7 +62,7 @@ function indexOf(arr, value, fromIndex) {
             return i;
         }
     }
-    return ('-1');
+    return -1;
 }
 
 console.log('indexOf');
@@ -91,7 +91,7 @@ function lastIndexOf(arr, value, fromIndex) {
             return i;
         }
     }
-    return ('-1');
+    return -1;
 }
 
 console.log('lastIndexOf');
