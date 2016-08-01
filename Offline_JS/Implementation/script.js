@@ -180,3 +180,4 @@ console.log('balance');
 console.log([{in:0, out:0}].balance());
 console.log([{in:1, out:-1}, {in:100, out: 100}].balance());
 console.log([{in:100, out:100500}, {in:-100}].balance());
+
