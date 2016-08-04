@@ -101,7 +101,7 @@ console.log('');
 
 (2).__proto__.formatCurrency = function() {
 
-    var incomingСurrency = this.toFixed(2).toString();
+    var incomingСurrency = this.toFixed(2);
     var dotIndex = incomingСurrency.indexOf('.');
     var main = incomingСurrency.slice(0, dotIndex);
     var minusIndex = incomingСurrency.indexOf('-');
