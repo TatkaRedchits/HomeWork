@@ -1,15 +1,22 @@
 function operatorNew(clazz, options) {
-    var exemplar = Object.create(clazz.prototype);
-    clazz.apply(exemplar, options);
+    var instance = {};
+    instance.__proto__ = clazz.prototype;
+    clazz.apply(instance, options);
 
-    return exemplar;
+    return instance;
 }
 
 function isInstanceOf(instance, clazz) {
-    if (instance === null) {
+    if (instance === null || instance.__proto__ === null) {
         return false;
     }
+
+    if (instance.__proto__.constructor === clazz) {
+        return true;
+    }
+
     var instanceProto = Object.getPrototypeOf(instance);
+
     var comparisonResult = instanceProto === clazz.prototype;
     if (!comparisonResult) {
         return isInstanceOf(instanceProto, clazz);
