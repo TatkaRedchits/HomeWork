@@ -92,34 +92,3 @@ for (var i = 0; i < locations.length; i++) {
         }
     }
 }
-/*
-
-
-*/
-
-function Person() {
-
-}
-
-function Male () {
-
-}
-function Female () {
-
-}
-
-Male.prototype = Object.create(Person.prototype);
-Female.prototype = Object.create(Person.prototype);
-
-Male.prototype.thinck = function() {
-
-}
-Male.prototype.age = 25;
-Female.prototype.age = 18;
-
-var male = new Male();
-var female = new Female();
-
-male instanceof Male; //t
-male instanceof Female; //f
-male instanceof Person; //t
