@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Home Work</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="js/tmpl.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <script type="text/template" id="questionnaire">
+    <div class="wrapper">
+      <div class="section">
+      <h1><%= data.name%></h1>
+        <img alt="Profile photo" src=<%= data.photo%>>
+        <p><%= data.education%></p>
+      </div>
+      <div class="section">
+        <p class="aim">Хочу учить фронтенд потому, что:</p>
+        <ul>
+          <% for(var i = 0; i < data.learnFrontend.length; i++) { %>
+          <li><%= data.learnFrontend[i]%></li>
+          <% } %>
+        </ul>
+      </div>
+      <div class="section">
+        <p  class="phone">Мой контактный телефон <br><a href=tel:<%= data.phone%>><%= data.phone%></a></p>
+        <p>Мой профиль в Facebook <br><a href=<%= data.facebookLink%>><%= data.facebook%></a></p>
+      </div>
+      <div class="section">
+        <p>Мой фидбек:</p>
+        <p><%= data.feedback%></p>
+      </div>
+    </div>
+  </script>
+</body>
+</html>
