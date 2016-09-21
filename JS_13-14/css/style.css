@@ -1,0 +1,86 @@
+.wrapper {
+    margin: 30px auto;
+    padding: 30px;
+    min-width: 330px;
+    max-width: 650px;
+    width: 50%;
+    text-align: center;
+    position:relative;
+    background:#FFF;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.wrapper:before, 
+.wrapper:after {
+    content:"";
+    position:absolute;
+    z-index:-1;
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    border-radius:100px / 10px;
+}
+.wrapper:after {
+    right:10px;
+    left:auto;
+    transform:skew(8deg) rotate(3deg);
+}
+
+.questionBlock{
+    text-align: left;
+}
+.answer-choices {
+    padding-left: 30px;
+}
+.checkbox:hover {
+    color: rgba(0,0,0,0.6);
+}
+.check {
+    top: 0;
+}
+.btn {
+    margin-top: 40px;
+    background-color: #eee;
+}
+
+/*  Modal  */
+
+.plug {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display:none;
+    background: grey;
+    z-index:1;
+}
+
+.my-modal {
+    display:none;
+    position:fixed;
+    left: 50%;
+    margin-left: -250px;
+    z-index:3;
+    background:#FFF;
+    box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.5);
+}
+.my-modal-window {
+    width: 500px;
+}
+.my-modal-header,
+.my-modal-body, 
+.my-modal-footer {
+    padding: 10px 20px;
+}
+.my-modal-header,
+.my-modal-body {
+    border-bottom: 1px solid #eee;
+}
+.my-modal-title {
+    display: inline-block;
+}
+.my-modal-window .btn {
+    margin: 0;
+}
