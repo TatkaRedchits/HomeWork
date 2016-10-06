@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clearfix {
+    content: '';
+    display: table;
+    clear: both;
+}
+.wrapper {
+    padding: 20px;
+}
+a {
+    text-decoration: none;
+}
+.date-picker {
+    margin-bottom: 20px;
+}
+.calendar {
+    position: relative;
+    width: 300px;
+    padding: 15px;
+    background: #eadfdb;
+    border: 1px solid #c1b1ac;
+}
+h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #4c0c0d;
+}
+.previous, 
+.next {
+    position: absolute;
+    top: 14px;
+    color: #4c0c0d;
+    font-size: 24px;
+}
+.previous {
+    left: 15px;
+} 
+.next {
+    right: 15px;
+}
+.previous:hover, 
+.next:hover {
+    color: #96696a;
+}
+.weekdays {
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.weekdays span,
+.day {
+    display: inline-block;
+    width: calc(100%/7);
+    text-align: center;
+    color: #4c0c0d;
+}
+.day {
+    color: #4c0c0d;
+}
+.day:hover {
+    background-color: #c1b1ac;
+}
+.dayOff {
+    color: #c12c2e;
+}
+.noActive {
+    color: rgba(76, 12, 13, 0.3);
+}
+.today {
+    background-color: #4c0c0d;
+    color: #fff;
+}
