@@ -1,0 +1,16 @@
+{
+  "name": "slider",
+  "version": "0.1.0",
+  "devDependencies": {
+    "connect-livereload": "^0.6.0",
+    "grunt": "~0.4.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-connect": "^0.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-serve": "^0.1.6"
+  }
+}
