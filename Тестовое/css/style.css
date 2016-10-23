@@ -1,0 +1,371 @@
+html, body {
+    height: 100%;
+    font: 13px 'Open Sans', Tahoma, sans-serif;
+    color: #fff;
+    background: linear-gradient(#ccc, #333);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+.inner-wrapper {
+    display: table-row;
+    height: 100%;
+}
+.header-wrapper,
+.footer-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #000;
+}
+.menu-wrapper,
+.content-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+.menu-wrapper {
+    background-color: #eda000;
+}
+header,
+.menu,
+.content,
+footer {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/*  HEADER  ********************************************/
+
+header {
+    padding: 25px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.slogan {
+    display: inline-block;
+    margin: 0;
+}
+.slogan span {
+    color: #eda000;
+}
+
+/*  Log in form  ***************************************/
+
+.login-form {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+.log-field {
+    display: inline-block;
+    position: relative;
+}
+.login-form input {
+    display: inline-block;
+    margin-right: 10px;
+    background: #fdfdfd;
+    vertical-align: middle;
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px solid #c1c1c1;
+    color: #333;
+    width: 200px;
+}
+#login-btn,
+#logout-btn {
+    width: auto;
+    padding: 5px 15px;
+    font-weight: bold;
+    line-height: 20px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: -1px 1px 1px #000;
+    background: #eda000;
+    background: linear-gradient(#eda000, #7c4b02);
+}
+#login-btn:hover,
+#logout-btn:hover {
+    background: linear-gradient(#d18e04, #533202);
+}
+#logout{
+    display: none;
+    align-items: center;
+}
+#user-name {
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+
+.login-form label.error {
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    text-align: right;
+    color: red;
+}
+#login-email-error, 
+#login-password-error {
+    display: none;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: red;
+}
+
+/*  MENU  **********************************************/
+
+.main-menu {
+    position: relative;
+    list-style: none;
+    z-index: 100;
+}
+.menu-item {
+    float: left;
+    position: relative;
+}
+.menu-item > a {
+    display: block;
+    text-decoration: none;
+    border-left: 1px solid #eda000;
+    border-right: 1px solid #eda000;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 48px;
+    padding: 0 35px;
+}
+.menu-item > a:hover {
+    background-color: #ef8906;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+.arrow:after {
+    position: absolute;
+    content: '\25bc';
+    color: #333;
+    right: 13px;
+    bottom: 14px;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 48px;
+    width: 175px;
+    background-color: #eda000;
+}
+.submenu-item {
+    display: block;
+}
+.submenu-item > a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 38px;
+    border-top: 1px solid #eda000;
+    border-bottom: 1px solid #eda000;
+}
+.submenu-item > a:hover {
+    background-color: #ef8906;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+.menu-item:hover > .submenu {
+    display: block;
+}
+
+/*  CONTENT  *******************************************/
+
+.content {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  Registration form  *********************************/
+
+.reg-form {
+    display: flex;
+    width: 400px;
+    margin: 15px;
+    padding: 20px 30px;
+    flex-direction: column;
+    align-items: center;    
+    background-color: #000;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 3px 0px #333;
+}    
+.reg-form h2 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #eda000;
+    word-spacing: 7px;
+}
+.reg-field {
+    position: relative;
+    width: 100%;
+}
+.reg-form input,
+.reg-form label {
+    display: block;
+    width: 100%;
+}
+.reg-form input {
+    margin-bottom: 15px;
+    padding: 5px;    
+    font-size: 16px;
+    color: #333;
+    vertical-align: middle;
+    background: #fdfdfd;
+    border-radius: 3px;    
+    border: 1px solid #c1c1c1;    
+}
+#reg-btn {
+    margin-top: 20px;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: -1px 1px 1px #000;
+    background: #eda000;
+    background: linear-gradient(#eda000, #7c4b02);
+}
+#reg-btn:hover {
+    background: linear-gradient(#d18e04, #533202);
+}
+.reg-form label.error {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    color: red;
+}
+#reg-error {
+    display: none;
+    color: red;
+}
+
+/*  profile   ******************************************/
+
+.profile {
+    display: none;
+    position: relative;
+    width: 100%;
+    margin: 15px auto;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0px 0px 3px 0px #333;
+}  
+.profile-header {
+    background-color: #e7e7e7;
+    border-bottom: 1px solid #ccc; 
+}  
+.profile-header-wrapper {
+    padding: 20px 20px 20px 230px;
+}  
+#profile-content-form {
+    padding: 20px 20px 20px 230px;
+}
+.profile-picture {
+    height: 160px; 
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 3px 0px #333;
+}
+.profile-picture img {
+    width: 150px;
+}
+.profile-name {
+    text-transform: capitalize;
+}
+.profile-btn {
+    padding: 5px 15px; 
+    margin: 25px 5px 10px;   
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 3px; 
+    border: 1px solid #4f4f4f;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: -1px 1px 1px #000;
+    background: #eda000;
+    background: linear-gradient(#ccc, #4f4f4f);
+}
+.profile-btn:hover {
+    background: linear-gradient(#999, #333);
+}
+.edit-profile-btn {
+    margin: 0;   
+    position: absolute;
+    right: 35px;
+    top: 17px;
+    font-size: 16px;
+}
+.save-profile-btn,
+.cansel-profile-btn {
+    display: none;
+}
+.field {
+    position: relative;
+    line-height: 28px;
+}
+.field-name {
+    text-transform: capitalize;
+    display: inline-block;
+    width: 100px;
+    font-size: 14px;
+    text-align: right;
+    color: #999;
+}
+.field-data {
+    padding-left: 15px;
+    font-size: 16px;
+    color: #000;
+}
+#field-password {
+    display: none;
+}
+.changed-field-data {
+    display: none;
+    width: 200px;
+    margin: 0 15px;
+    padding: 0 5px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 3px;
+    border: 1px solid #c1c1c1;
+    line-height: 22px;
+}
+.field label.error {
+    position: absolute;
+    text-align: right;
+    color: red;
+}
+    
+/*  FOOTER  ********************************************/
+
+footer {
+    padding: 20px 10px;
+}

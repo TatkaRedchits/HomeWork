@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+    <script src="js/md5.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.js"></script>
+    <script src="js/country.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inner-wrapper">
+            <div class="header-wrapper">
+                <header>
+                    <h1 class="slogan">Enjoy<span>Life</span></h1>
+                    <form id="login-form" class="login-form">
+                        <div class="log-field">
+                            <label for="log-email"></label>
+                            <input type="text" name="log-email" id="log-email" placeholder="Email">
+                        </div>
+                        <div class="log-field">
+                            <label for="log-password"></label>
+                            <input type="password" name="log-password" id="log-password" placeholder="Password">
+                        </div>
+                        <span id="login-email-error">Sorry, we don't recognize this email. Please try again.</span>
+                        <span id="login-password-error">This's not the right password. Please try again.</span>
+                        <input id="login-btn" type="submit" value="Log in">
+                    </form>
+                    <div id="logout">
+                        <h2 id="user-name"></h2>
+                        <input id="logout-btn" type="button" value="Log out">
+                    </div>
+                </header>
+            </div>
+            <div class="menu-wrapper">
+                <div class="menu">
+                    <ul class="main-menu clearfix">
+                        <li class="menu-item">
+                            <a href="#">Item 1</a>
+                        </li>
+                        <li class="menu-item arrow">
+                            <a href="#">Item 2</a>
+                            <ul class="submenu">
+                                <li class="submenu-item">
+                                    <a href="">Item 2.1</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="">Item 2.2</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="">Item 2.3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Item 3</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Item 4</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="content">
+                    <div class="profile"></div>
+
+                    <script type="text/template" id="user-profile">
+                        <div class="profile-header">
+                            <div class="profile-header-wrapper">
+                                <h2 class="profile-name"><%= data.firstName + ' ' + data.lastName%></h2>
+                                <div class="profile-picture">
+                                    <img src="img/photo.jpg">
+                                </div>  
+                                <input id="edit-profile-btn" class="profile-btn edit-profile-btn" type="button" value="edit">       
+                            </div>
+                        </div>
+                        <div class="profile-content">
+                            <form id="profile-content-form">
+                                <div class="field">
+                                    <span class="field-name">first name:</span>
+                                    <span class="field-data"><%= data.firstName%></span>
+                                    <input type="text" id="first-name" name="first-name" class="changed-field-data" value=<%= data.firstName%>>
+                                </div>
+                                <div class="field">
+                                    <span class="field-name">last name:</span>
+                                    <span class="field-data"><%= data.lastName%></span>
+                                    <input type="text" id="last-name" name="last-name" class="changed-field-data" value=<%= data.lastName%>>
+                                </div>
+                                <div class="field">
+                                    <span class="field-name">email:</span>
+                                    <span class="field-data"><%= data.email%></span>
+                                    <input type="text" id="email" name="email" class="changed-field-data" value=<%= data.email%>>
+                                </div>
+                                <div class="field">
+                                    <span class="field-name">country:</span>
+                                    <span class="field-data"><%= data.country%></span>
+                                    <select id="country" name="country" class="changed-field-data" value=<%= data.email%>>
+                                        <option value="">Country...</option>
+                                        <% for (var i = 0; i < countries.length; i++) { %>
+                                        <option <%= countries[i] == data.country ? 'selected' : '' %>><%= countries[i] %></option>
+                                        <% } %>
+                                    </select>
+                                </div>
+                                <div id="field-password" class="field">
+                                    <span class="field-name">password:</span>
+                                    <input type="password" id="password" name="password" class="changed-field-data">
+                                </div>
+                                <div class="field">
+                                    <input type="hidden" id="userId" name="userId" value=<%= data.userId%>>
+                                </div>
+                                <input id="save-btn" class="profile-btn save-profile-btn" type="submit" value="Save">
+                                <input id="cansel-btn" class="profile-btn cansel-profile-btn" type="button"  name="cansel" value="Cancel">
+                            </form>
+                        </div>
+                    </script>
+
+                    <form id="reg-form" class="reg-form">
+                        <h2 class="title">create your account</h2>
+                        <div class="reg-field">
+                            <label for="reg-firstName">First name</label>
+                            <input type="text" name="reg-first-name" id="reg-first-name">
+                        </div>
+                        <div class="reg-field">
+                            <label for="reg-lastName">Last name</label>
+                            <input type="text" name="reg-last-name" id="reg-last-name">
+                        </div>
+                        <div class="reg-field">
+                            <label for="reg-email">Email</label>
+                            <input type="email" name="reg-email" id="reg-email">
+                        </div>
+                        <div class="reg-field">
+                            <label for="reg-password">Password</label>
+                            <input type="password" name="reg-password" id="reg-password">
+                        </div>
+                        <div class="reg-field">
+                            <label for="reg-confirm">Confirm password</label>
+                            <input type="password" name="reg-confirm" id="reg-confirm">
+                        </div>
+                        <span id="reg-error">Sorry user with this e-mail already exists</span>
+                        <input id="reg-btn" type="submit" value="Create">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-wrapper">
+            <footer>
+                <div class="copyright"><h3 class="slogan">Enjoy<span>Life</span></h3> &copy 2016</div>
+            </footer>
+        </div> 
+    </div>
+
+</body>
+</html>
